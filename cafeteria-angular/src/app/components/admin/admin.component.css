@@ -1,0 +1,27 @@
+.home{
+  background-color: #110e41;
+  color:white;
+
+  min-height: calc(100vh - 60px);
+}
+.title{
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 100px;
+  font-family: "Verdana", sans-serif;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coffee{
+  margin-left: 300px;
+  border-radius: 30%;
+}
+
+.content{
+  font-size: x-large;
+  font-family: "Times New Roman";
+}

@@ -1,0 +1,48 @@
+
+
+
+@if(edit){
+  <h1 class="title">UPDATE PRODUCT</h1>
+}
+
+@if(!edit){
+  <h1 class="title">ADD PRODUCT</h1>
+}
+<div class="product">
+<form #productForm="ngForm" (ngSubmit)="update()" novalidate class="form">
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" required  #productname="ngModel"
+           [(ngModel)]="product.name">
+  </p>
+  <div *ngIf="!productname?.valid && productname?.touched" class="error">
+    Product name is required
+
+  </div>
+
+  <p>
+    <label for="price">Price: </label>
+    <input type="number" id="price" name="price" required  #price="ngModel"
+           [(ngModel)]="product.price">
+  </p>
+  <div *ngIf="!price?.valid &&  price?.touched" class="error">
+    Price is required
+  </div>
+
+  <p>
+    <label for="image">Image URL: </label>
+    <input type="text" id="image" name="image" required  #image="ngModel"
+           [(ngModel)]="product.imageUrl">
+  </p>
+  <div *ngIf="!image?.valid && image?.touched" class="error">
+    Product image is required
+
+  </div>
+
+
+  <button type="submit" [disabled]="!productForm.valid" class="submit">Submit</button>
+
+</form>
+
+</div>

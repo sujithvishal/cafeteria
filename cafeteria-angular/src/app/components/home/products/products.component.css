@@ -1,0 +1,86 @@
+.title{
+  text-align: center;
+  padding: 10px;
+  color:white;
+  margin-bottom: 25px;
+}
+
+.products{
+  min-height: calc(100vh - 60px);
+  background-color: #110e41;
+  padding-bottom: 15px;
+}
+
+.productsList{
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+
+
+
+}
+
+.product{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:250px;
+  border-radius: 10px;
+  background-color: #4c4ca4;
+  padding-bottom:10px;
+  color:white;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+}
+
+.detail{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding:10px;
+  font-family: Verdana;
+  align-items: center;
+}
+
+.cartButton{
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+  padding:10px;
+  color:white;
+  cursor: pointer;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.editButton, .deleteButton {
+  padding:5px;
+  width: 55px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: Verdana;
+  border: none;
+color:white;
+  cursor:pointer;
+}
+
+.editButton{
+  background-color: #da9715;
+}
+
+.deleteButton{
+  background-color: #cc3131;
+}
+

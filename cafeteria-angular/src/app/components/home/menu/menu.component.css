@@ -1,0 +1,7 @@
+.menu{
+  min-height: calc(100vh - 60px);
+  background-color: #110e41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

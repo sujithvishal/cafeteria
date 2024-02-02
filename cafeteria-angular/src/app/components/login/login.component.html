@@ -1,0 +1,40 @@
+
+  <h1>LOGIN FORM</h1>
+<div class="login">
+
+<!--<div class="check">-->
+
+<!--<p class="admin">Admin: </p>-->
+<!--<input [(ngModel)]="adminLogin" type="checkbox" id="check">-->
+<!--</div>-->
+
+<form #loginForm="ngForm" (ngSubmit)="login()" novalidate class="form">
+
+  <p>
+    <label for="id">Employee Id: </label>
+    <input type="text" id="id" name="id" required  #userid="ngModel"
+           [(ngModel)]="user.id">
+  </p>
+  <div *ngIf="!userid?.valid && userid?.touched" class="error">
+      Employee Id is required
+
+  </div>
+
+  <p>
+    <label for="password">Password: </label>
+    <input type="password" id="password" name="password" required  #password="ngModel"
+             [(ngModel)]="user.password">
+  </p>
+  <div *ngIf="!password?.valid &&  password?.touched" class="error">
+      Password is required
+  </div>
+
+  @if(loginFailed){
+    <p class='failed'>Login Failed! Invalid username or password</p>
+  }
+
+
+    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+
+</form>
+</div>

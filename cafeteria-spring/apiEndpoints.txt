@@ -1,0 +1,30 @@
+
+Base URL: http://localhost:8080
+
+Employee:
+GET: /employee          - Get all employees(Admin)
+GET: /employee/{id}     - Get employee by id(Admin)
+POST: /employee/login   - Employee login
+POST: /employee/add     - Add Employee(Admin)
+POST: /employee/add-all - Add multiple employee(Admin)
+
+Products:
+GET: /products          - Get all products
+GET: /products/{id}     - Get product by id
+POST: /products         - Add product
+POST: /products/add-all - Add multiple products
+PUT: /products          - Update product
+DELETE: /products/{id}  - Delete product
+
+Orders:
+GET: /orders                - Get all orders
+GET: /orders/{id}           - Get order by id
+GET: /orders/pending        - Get pending order
+GET: /orders/employee?id=   - Get orders of employee
+POST: /orders               - Add order
+PUT: /orders?id=&status=    - Update order status
+DELETE: /orders/{id}        - Delete order
+
+
+
+

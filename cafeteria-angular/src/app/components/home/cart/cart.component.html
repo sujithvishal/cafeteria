@@ -1,0 +1,41 @@
+<div class="cart">
+
+<h1 class="title">CART ITEMS</h1>
+
+@if(cartItems.length==0){
+  <h2> You have no Cart Items</h2>
+
+}
+
+  <div class="productsList">
+
+
+@for(item of cartItems; track item){
+
+  <div class="product">
+    <img src="{{item.product.imageUrl}}" alt="image" height="200" width="250"/>
+    <div class="details">
+
+    <p>{{item.product.name}}</p>
+    <div><button (click)="decrement(item.product)" class="decrement">-</button>{{item.count}}<button (click)="increment(item.product)" class="increment">+</button></div>
+    </div>
+    <div class="buttons">
+
+    <button (click)="remove(item.product)" class="removeButton">Remove</button>
+    <p>Rs.{{calculate(item.count,item.product.price)}}</p>
+    </div>
+  </div>
+
+}
+  </div>
+  <div class="total">
+
+<p>Total: {{total}}</p>
+
+@if(cartItems.length>0){
+  <button (click)="placeOrder()" class="placeButton">Place Order</button>
+
+}
+  </div>
+
+</div>

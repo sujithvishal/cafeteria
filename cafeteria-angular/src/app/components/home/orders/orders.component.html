@@ -1,0 +1,32 @@
+<div class="orders">
+  <h1 class="title">YOUR ORDERS</h1>
+
+@if (orders.length==0){
+  <h2>You haven't placed any order</h2>
+}
+  <div class="list">
+
+@for (order of orders;track order){
+  <div class="order">
+
+  <div class="details1">
+
+  <p>ID: {{order.id}}</p>
+  <p>{{order.date}}</p>
+  </div>
+  <div class="details2">
+
+  @for( item of order.items;track item){
+    <p>{{item.product.name}} - {{item.count}}</p>
+  }
+  </div>
+    <div class="details3">
+
+  <p>Rs.{{order.total}}</p>
+    </div>
+  <p>{{order.status}}</p>
+
+  </div>
+}
+  </div>
+</div>

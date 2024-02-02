@@ -1,0 +1,49 @@
+.title{
+  text-align: center;
+  padding: 10px;
+  color:white;
+  margin-bottom: 25px;
+}
+
+.orders{
+  min-height: calc(100vh - 60px);
+  background-color: #110e41;
+  padding-bottom: 15px;
+  color:white;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+}
+
+.order{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:15px;
+  background-color: #0b1e59;
+  margin: 15px;
+  align-content: space-between;
+  /*border: 1px solid #ddd;*/
+}
+
+.details1,
+.details2,
+.details3{
+  flex: 1;
+}
+
+.details1{
+  line-height: 40px;
+}
+
+
+p {
+  margin: 0;
+}
+h2{
+  text-align: center;
+}

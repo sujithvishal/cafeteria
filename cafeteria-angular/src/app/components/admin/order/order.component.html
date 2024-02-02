@@ -1,0 +1,39 @@
+<div class="orders">
+
+  <h1 class="title">PENDING ORDERS</h1>
+
+@if (orders.length==0){
+  <h2>No Pending orders</h2>
+}
+
+  <div class="list">
+
+
+@for (order of orders;track order){
+<div class="order">
+  <div class="details1">
+
+  <p>{{order.id}}</p>
+  <p>{{order.date|date:'dd/MM/yyyy'}}</p>
+  </div>
+  <div class="details2">
+
+  @for( item of order.items;track item){
+    <p>{{item.product.name}} - {{item.count}}</p>
+  }
+  </div>
+  <div class="details3">
+
+
+  <p>{{order.total}}</p>
+  </div>
+  <div class="details4">
+
+  <p>{{order.status}}</p>
+  </div>
+  <button (click)="updateOrder(order)" class="preparedButton">Prepared</button>
+</div>
+}
+
+  </div>
+</div>
