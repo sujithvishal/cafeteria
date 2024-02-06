@@ -35,6 +35,6 @@ jobs:
           context: ./cafeteria-angular
           file: ./cafeteria-angular/Dockerfile
           push: true
-          tags: sujith071/angularrepo:${{ env.NOW }}
+          tags: sujith071/angularrepo:latest
           working-directory: ./cafeteria-angular
           
