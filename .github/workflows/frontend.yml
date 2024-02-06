@@ -17,7 +17,7 @@ jobs:
       - run: ls
 
       - name: change dir
-        run: cd cafeteria-angular
+        run: cd ./cafeteria-angular
 
       - run: ls
 
