@@ -32,8 +32,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./cafeteria-angular
+          file: ./cafeteria-angular/Dockerfile
           push: true
           tags: sujith071/angularrepo:latest
           working-directory: ./cafeteria-angular
