@@ -59,6 +59,7 @@
             "production": {
               "buildTarget": "cafeteria-angular:build:production"
             },
+
             "development": {
               "buildTarget": "cafeteria-angular:build:development"
 
