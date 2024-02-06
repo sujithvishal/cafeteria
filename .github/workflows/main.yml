@@ -32,6 +32,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4     
         with:
           folder: /dist/browser
+          run: ls
           working-directory: ./cafeteria-angular
           branch: prod  
           token: ${{ secrets.GH_TOKEN }}
