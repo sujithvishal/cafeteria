@@ -17,7 +17,7 @@ PUT: /products          - Update product
 DELETE: /products/{id}  - Delete product
 
 Orders:
-GET: /orders                - Get all orders
+GET: /orders                - Get all  orders
 GET: /orders/{id}           - Get order by id
 GET: /orders/pending        - Get pending order
 GET: /orders/employee?id=   - Get orders of employee
