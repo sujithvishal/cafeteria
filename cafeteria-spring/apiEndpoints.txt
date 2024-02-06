@@ -12,7 +12,7 @@ Products:
 GET: /products          - Get all products
 GET: /products/{id}     - Get product by id
 POST: /products         - Add product
-POST: /products/add-all - Add multiple   product s
+POST: /products/add-all - Add multiple   products
 PUT: /products          - Update product
 DELETE: /products/{id}  - Delete product
 
