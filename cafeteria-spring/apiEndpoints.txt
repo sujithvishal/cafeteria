@@ -23,7 +23,7 @@ GET: /orders/pending        - Get pending order
 GET: /orders/employee?id=   - Get orders of employee
 POST: /orders               - Add order
 PUT: /orders?id=&status=    - Update order status
-DELETE: /orders/{id}        - Delete  order
+DELETE: /orders/{id}        - Delete   order
 
 
 
