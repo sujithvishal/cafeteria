@@ -13,6 +13,7 @@ FROM node:21-alpine3.18 as angular
 WORKDIR /app
 
 COPY . .
+RUN apk update && apk add npm
 RUN npm install
 RUN npm run build --prod
 
