@@ -15,9 +15,11 @@ jobs:
 #      - name: change dir
 #        run: cd cafeteria-spring
       - name: Build and test
-        run: chmod +x ./cafeteria-spring/mvnw
+        run: chmod +x mvnw
+        working-directory: ./cafeteria-spring
       - name: build
-        run: ./cafeteria-spring/mvnw clean package
+        run: ./mvnw clean package
+        working-directory: ./cafeteria-spring
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
@@ -30,6 +32,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./cafeteria-spring/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: sujith071/springrepo:latest
+          working-directory: ./cafeteria-spring
