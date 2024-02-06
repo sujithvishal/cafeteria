@@ -29,6 +29,10 @@ jobs:
           registry: docker.io
           username:  ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+
+      - run: ls
+        working-directory: ./cafeteria-spring
       
     
       - name: Build and push Docker image
