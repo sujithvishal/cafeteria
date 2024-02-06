@@ -14,8 +14,12 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      # - name: change dir
-      #   run: cd cafeteria-angular
+      - run: ls
+
+      - name: change dir
+        run: cd cafeteria-angular
+
+      - run: ls
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
