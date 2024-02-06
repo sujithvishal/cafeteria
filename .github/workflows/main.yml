@@ -17,8 +17,15 @@ jobs:
         with:
           node-version: 20
 
+      - run: ls
+
       - name: Build Angular app to prod
         run: npm install && npm run gh-build
+        working-directory: ./cafeteria-angular
+
+      - run: ls
+
+      - run: ls
         working-directory: ./cafeteria-angular
 
       - name: Deploy to GitHub Pages
