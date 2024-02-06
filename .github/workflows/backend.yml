@@ -32,7 +32,7 @@ jobs:
 
 
       - run: ls
-        working-directory: ./cafeteria-spring
+        working-directory: ./cafeteria-spring/target
       
     
       - name: Build and push Docker image
