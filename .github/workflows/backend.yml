@@ -32,13 +32,13 @@ jobs:
 
 
       - run: ls
-        working-directory: ./cafeteria-spring
+        working-directory: ./cafeteria-spring/target
       
     
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./cafeteria-spring
           file: ./cafeteria-spring/Dockerfile
           push: true
           tags: sujith071/springrepo:latest
