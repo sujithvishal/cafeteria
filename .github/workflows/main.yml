@@ -1,37 +1,32 @@
-name: Docker Build and Push
+name: Angular Build and Deploy
 
 on:
   push:
     paths:
-      - 'cafeteria-angular/**'
-      - 'cafeteria-spring/**'
+      - "cafeteria-angular/**"
 
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build Angular Docker Image
-#        if: contains(github.event_name, 'push') && contains(github.ref, 'refs/heads/main') && github.path == 'cafeteria-angular'
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: |
-          echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-          cd cafeteria-angular
-          docker build -t sujith071/angularrepo:latest .
-          docker push sujith071/angularrepo:latest
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-      - name: Build Spring Boot JAR and Docker Image
-#        if: contains(github.event_name, 'push') && contains(github.ref, 'refs/heads/main') && github.path == 'cafeteria-spring'
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: |
-          cd cafeteria-spring
-          ./mvnw clean package 
-          docker build -t sujith071/springrepo:latest .
-          docker push sujith071/springrepo:latest
+      - name: Build Angular app to prod
+        run: npm install && npm run gh-build
+        working-directory: ./cafeteria-angular
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4     
+        with:
+          folder: dist/browser
+          branch: prod  
+          token: ${{ secrets.GH_TOKEN }}
+          working-directory: ./cafeteria-angular
+        
+ 
