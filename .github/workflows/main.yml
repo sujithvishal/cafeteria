@@ -33,7 +33,7 @@ jobs:
         with:
           run: ls
           working-directory: ./cafeteria-angular
-          folder: /dist/browser
+          folder: ./dist/browser
           
           branch: prod  
           token: ${{ secrets.GH_TOKEN }}
