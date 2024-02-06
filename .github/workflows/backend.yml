@@ -12,8 +12,8 @@ jobs:
         with:
           distribution: 'oracle' 
           java-version: '21'
-      - name: change dir
-        run: cd cafeteria-spring
+#      - name: change dir
+#        run: cd cafeteria-spring
       - name: Build and test
         run: chmod +x ./cafeteria-spring/mvnw
       - name: build
