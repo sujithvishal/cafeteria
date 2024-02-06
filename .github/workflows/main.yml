@@ -27,6 +27,6 @@ jobs:
           folder: ./cafeteria-angular/dist/browser
           branch: prod  
           token: ${{ secrets.GH_TOKEN }}
-          working-directory: ./cafeteria-angular
+       
         
  
