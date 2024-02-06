@@ -14,9 +14,12 @@ jobs:
           java-version: '21'
 #      - name: change dir
 #        run: cd cafeteria-spring
+      - run: ls
+        working-directory: ./cafeteria-spring
       - name: Build and test
         run: chmod +x mvnw
         working-directory: ./cafeteria-spring
+
       - name: build
         run: ./mvnw clean package
         working-directory: ./cafeteria-spring
@@ -32,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile
+          file: ./cafeteria-spring/Dockerfile
           push: true
           tags: sujith071/springrepo:latest
           working-directory: ./cafeteria-spring
