@@ -57,7 +57,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cafeteria-angular:build:production"
+              "buildTarget": "cafeteria-angular:build:production "
             },
             "development": {
               "buildTarget": "cafeteria-angular:build:development"
