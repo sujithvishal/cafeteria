@@ -14,8 +14,8 @@ jobs:
           java-version: '21'
 #      - name: change dir
 #        run: cd cafeteria-spring
-      - run: ls
-        working-directory: ./cafeteria-spring
+      # - run: ls
+      #   working-directory: ./cafeteria-spring
       - name: Build and test
         run: chmod +x mvnw
         working-directory: ./cafeteria-spring
@@ -31,8 +31,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
 
-      - run: ls
-        working-directory: ./cafeteria-spring/target
+      # - run: ls
+      #   working-directory: ./cafeteria-spring/target
       
     
       - name: Build and push Docker image
