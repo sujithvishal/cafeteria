@@ -38,6 +38,7 @@ jobs:
           working-directory: ./cafeteria-angular
   deploy:
     runs-on: self-hosted
+    needs: push_to_registry
     steps:
       - uses: actions/checkout@v4
  
