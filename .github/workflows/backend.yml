@@ -41,5 +41,5 @@ jobs:
           context: ./cafeteria-spring
           file: ./cafeteria-spring/Dockerfile
           push: true
-          tags: sujith071/springrepo:latest
+          tags: sujith071/springrepo:${{github.run_number}}
           working-directory: ./cafeteria-spring
