@@ -10,4 +10,5 @@ public class CafeteriaApplication {
 		SpringApplication.run(CafeteriaApplication.class, args);
 	}
 
+
 }
