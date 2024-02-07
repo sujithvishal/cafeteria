@@ -17,7 +17,7 @@ services:
     networks:
       - docker-elk
   backend:
-    image: spring-app
+    image: sujith071/springrepo
     container_name: spring-app
     ports:
       - "8080:8080"
@@ -34,7 +34,7 @@ services:
 
 
   frontend:
-    image: angular-app
+    image: sujith071/angularrepo
     container_name: angular-app
     ports:
       - "4200:4200"
