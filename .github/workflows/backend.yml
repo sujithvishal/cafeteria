@@ -41,7 +41,7 @@ jobs:
           context: ./cafeteria-spring
           file: ./cafeteria-spring/Dockerfile
           push: true
-          tags: sujith071/springrepo:${{github.run_number}}
+          tags: sujith071/springrepo
           working-directory: ./cafeteria-spring
           
   deploy:
