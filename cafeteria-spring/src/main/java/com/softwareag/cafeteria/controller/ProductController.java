@@ -24,6 +24,12 @@ public class ProductController {
     @PostConstruct
     public void init(){
         List<Product> products=new ArrayList<>();
+        products.add(new Product(null,"Tea",15,"https://th.bing.com/th/id/OIP.fbyW5aeaY_JOIDVO7uNzlgHaFF?rs=1&pid=ImgDetMain"));
+        products.add(new Product(null,"Coffee",15,"https://th.bing.com/th/id/OIP.HxFfBmqvKsktRmVJcbguBwHaE8?rs=1&pid=ImgDetMain"));
+        products.add(new Product(null,"Sandwich",35,"https://images4.alphacoders.com/664/664192.jpg"));
+        products.add(new Product(null,"Apple juice",30,"https://th.bing.com/th/id/OIP.a5vbXJVyEtZ6g44E_HgsSQHaFx?w=227&h=180&c=7&r=0&o=5&pid=1.7    "));
+        products.add(new Product(null,"Carrot juice",40,"https://th.bing.com/th/id/OIP.UasOC2jpBZYuWDZq5MBfgAHaHS?w=180&h=180&c=7&r=0&o=5&pid=1.7"));
+
 
 
 
