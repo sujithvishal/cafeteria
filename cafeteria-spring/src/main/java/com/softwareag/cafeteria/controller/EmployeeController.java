@@ -33,6 +33,7 @@ public class EmployeeController {
         employees.add(new Employee("5002","Pragadeesh","1234",200,"USER"));
         employees.add(new Employee("5000","Admin","admin",200,"ADMIN"));
 
+
         employeeService.addAllEmployee(employees);
     }
 
